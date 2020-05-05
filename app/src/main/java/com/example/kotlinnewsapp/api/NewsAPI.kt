@@ -1,6 +1,6 @@
 package com.example.kotlinnewsapp.api
 
-import com.example.kotlinnewsapp.NewsResponse
+import com.example.kotlinnewsapp.model.NewsResponse
 import com.example.kotlinnewsapp.util.Constants.Companion.API_KEY
 import retrofit2.Response
 import retrofit2.http.GET

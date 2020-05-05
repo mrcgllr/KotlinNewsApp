@@ -1,4 +1,4 @@
-package com.example.kotlinnewsapp
+package com.example.kotlinnewsapp.model
 
 data class Source(
     val id: Any,
