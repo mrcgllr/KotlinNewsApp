@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/news_nav_graph"
@@ -9,21 +8,52 @@
     <fragment
         android:id="@+id/breakingNewsFragment"
         android:name="com.example.kotlinnewsapp.ui.fragments.BreakingNewsFragment"
-        android:label="fragment_breaking_news"
-        tools:layout="@layout/fragment_breaking_news" />
+        android:label="Breaking News Fragment"
+        tools:layout="@layout/fragment_breaking_news">
+        <action
+            android:id="@+id/action_breakingNewsFragment_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
     <fragment
         android:id="@+id/savedNewsFragment"
         android:name="com.example.kotlinnewsapp.ui.fragments.SavedNewsFragment"
-        android:label="fragment_saved_news"
-        tools:layout="@layout/fragment_saved_news" />
+        android:label="Saved News Fragment"
+        tools:layout="@layout/fragment_saved_news">
+        <action
+            android:id="@+id/action_savedNewsFragment_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
     <fragment
         android:id="@+id/searchNewsFragment"
         android:name="com.example.kotlinnewsapp.ui.fragments.SearchNewsFragment"
-        android:label="fragment_search_news"
-        tools:layout="@layout/fragment_search_news" />
+        android:label="Search News Fragment"
+        tools:layout="@layout/fragment_search_news">
+        <action
+            android:id="@+id/action_searchNewsFragment_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
     <fragment
         android:id="@+id/articleFragment"
         android:name="com.example.kotlinnewsapp.ui.fragments.ArticleFragment"
-        android:label="fragment_article"
+        android:label="Article Fragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
         tools:layout="@layout/fragment_article" />
 </navigation>
