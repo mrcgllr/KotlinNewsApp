@@ -11,8 +11,7 @@ import com.example.kotlinnewsapp.model.Article
 import kotlinx.android.synthetic.main.item_article_preview.view.*
 
 
-class NewsAdapter(private val list: List<Article>,
-        private val onItemClickListener:(Article)->Unit) : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
+class NewsAdapter(private val onItemClickListener:(Article)->Unit) : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
 
     inner class ArticleViewHolder(container: ViewGroup) : RecyclerView.ViewHolder(
         LayoutInflater.from(container.context)
