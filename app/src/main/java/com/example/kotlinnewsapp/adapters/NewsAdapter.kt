@@ -28,16 +28,14 @@ class NewsAdapter(private val onItemClickListener:(Article)->Unit) : RecyclerVie
                         .load(article.urlToImage)
                         .into(itemView.ivArticleImage)
 
-                tvSource.text=article.source.name
+                tvSource.text=article.source?.name
                 tvTitle.text=article.title
                 tvDescription.text=article.description
                 tvPublishedAt.text = article.publishedAt
             }
 
             itemView.setOnClickListener {
-                onItemClickListener?.let {
-                    it(article)
-                }
+                onItemClickListener(article)
             }
 
         }

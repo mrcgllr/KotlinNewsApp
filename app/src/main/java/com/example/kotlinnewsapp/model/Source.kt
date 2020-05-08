@@ -1,6 +1,6 @@
 package com.example.kotlinnewsapp.model
 
 data class Source(
-    val id: Any,
-    val name: String
+    val id: Any?=null,
+    val name: String=""
 )
